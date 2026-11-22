@@ -1,29 +1,52 @@
 # AI Engineering and Research
 
-I use Python, statistics and machine learning to investigate data, build predictive models and explore how intelligent systems can solve real problems.
-
-## Machine Learning
-
-- [Customer churn prediction](Machine-Learning/customer-churn-prediction/) — I compared logistic regression and random forests to examine customer retention risk.
-- [Ames housing price regression](Machine-Learning/ames-housing-regression/) — I used property characteristics to estimate sale prices.
-- [Hierarchical clustering](Machine-Learning/hierarchical-clustering/) — I examined how distance metrics and linkage choices influence Iris clusters.
-- [Iris logistic regression](Machine-Learning/iris-logistic-regression/) — I trained a binary flower-species classifier.
-- [Titanic decision tree](Machine-Learning/titanic-decision-tree/) — I explored decision trees and model depth using passenger survival records.
-- [Titanic random forest](Machine-Learning/titanic-random-forest/) — I examined random forests and feature importance.
-- [Iris principal component analysis](Machine-Learning/iris-principal-component-analysis/) — I used PCA to reduce numerical dimensions and visualize clustering.
-- [US arrests PCA and clustering](Machine-Learning/us-arrests-pca-and-clustering/) — I compared PCA, K-means and hierarchical grouping of state-level observations.
-
-## Deep Learning
-
-- [Fashion-MNIST image classification](Deep-Learning/fashion-mnist-classification/) — I built and evaluated a PyTorch clothing classifier.
-- [Neural-network forward propagation](Deep-Learning/numpy-neural-network-forward-pass/) — I implemented a NumPy network forward pass.
-- [Backpropagation and gradient learning](Deep-Learning/numpy-backpropagation-gradient-learning/) — I implemented weight updates and tracked training loss.
-- [Character-level text generation](Deep-Learning/pytorch-character-level-text-generation/) — I trained a recurrent network to generate text.
+I use Python, data analysis, machine learning and neural networks to investigate how data can be converted into useful models and decisions. This is my technical portfolio of implemented projects, practical analysis and original HyperionDev submissions.
 
 ## Data Analytics
 
-- [Data Analytics](Data-Analytics/) — I cleaned and analysed an automobile dataset, investigated price relationships and visualised numerical patterns.
+- [Comparing Vehicle Specifications Visually](Data-Analytics/comparing-vehicle-specifications-visually/)
+- [Comparing Electricity Access](Data-Analytics/comparing-electricity-access/)
+- [Designing Clear Data Visualisations](Data-Analytics/designing-clear-data-visualisations/)
+- [Exploring Patterns With Tableau](Data-Analytics/exploring-patterns-with-tableau/)
+- [Seeing Data With Python Charts](Data-Analytics/seeing-data-with-python-charts/)
+- [From Raw Records To Clean Data](Data-Analytics/from-raw-records-to-clean-data/)
+- [Analysing Titanic Passenger Patterns](Data-Analytics/analysing-titanic-passenger-patterns/)
+- [Visualising Diabetes Patterns](Data-Analytics/visualising-diabetes-patterns/)
+- [Exploring Automobile Price Drivers](Data-Analytics/exploring-automobile-price-drivers/)
+- [Understanding Structured Datasets](Data-Analytics/understanding-structured-datasets/)
+- [Building Numerical Computations With Numpy](Data-Analytics/building-numerical-computations-with-numpy/)
+- [Exploring Wine Dataset Patterns](Data-Analytics/exploring-wine-dataset-patterns/)
 
-## Tools and methods
+## Machine Learning
 
-Python, pandas, NumPy, scikit-learn, SciPy, PyTorch, TensorFlow, spaCy, Matplotlib and seaborn. Each project documents my implementation, technical methods and reproduction steps.
+- [Modelling Home Prices With Regression](Machine-Learning/modelling-home-prices-with-regression/)
+- [Exploring Country Development Clusters](Machine-Learning/exploring-country-development-clusters/)
+- [Predicting Which Customers Leave](Machine-Learning/predicting-which-customers-leave/)
+- [Reading Handwritten Digits](Machine-Learning/reading-handwritten-digits/)
+- [Discovering Groups With Hierarchical Clustering](Machine-Learning/discovering-groups-with-hierarchical-clustering/)
+- [Classifying Iris Flowers](Machine-Learning/classifying-iris-flowers/)
+- [Visualising Data With Pca](Machine-Learning/visualising-data-with-pca/)
+- [Explaining Titanic Survival With Trees](Machine-Learning/explaining-titanic-survival-with-trees/)
+- [Predicting Titanic Survival With Forests](Machine-Learning/predicting-titanic-survival-with-forests/)
+- [Mapping Patterns In Us Arrests](Machine-Learning/mapping-patterns-in-us-arrests/)
+- [Exploring Machine Learning Methods](Machine-Learning/exploring-machine-learning-methods/)
+
+## Deep Learning
+
+- [Fashion Image Recognition With Pytorch](Deep-Learning/fashion-image-recognition-with-pytorch/)
+- [Building Backpropagation From Scratch](Deep-Learning/building-backpropagation-from-scratch/)
+- [Modelling Neural Network Forward Passes](Deep-Learning/modelling-neural-network-forward-passes/)
+- [Generating Text With Recurrent Networks](Deep-Learning/generating-text-with-recurrent-networks/)
+
+## Natural Language Processing
+
+- [Finding Sentiment In Reviews](Natural-Language-Processing/finding-sentiment-in-reviews/)
+- [Recommending Films With Text Similarity](Natural-Language-Processing/recommending-films-with-text-similarity/)
+- [Resolving Ambiguous Sentences](Natural-Language-Processing/resolving-ambiguous-sentences/)
+- [Comparing Meaning With Spacy](Natural-Language-Processing/comparing-meaning-with-spacy/)
+
+## Tools
+
+Python · pandas · NumPy · SciPy · scikit-learn · PyTorch · TensorFlow · spaCy · Matplotlib · Jupyter Notebook
+
+The individual folders include my code, supporting datasets and written analyses where available.
