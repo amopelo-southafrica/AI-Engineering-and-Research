@@ -13,3 +13,10 @@ Install the listed packages, open Jupyter and run the notebook with `Country-dat
 I corrected the last clustering cell to use the intended three-cluster model rather than the preceding loop variable.
 
 HyperionDev task M11T01.
+
+## Research paper
+
+- [Read the full research paper (PDF)](RESEARCH_PAPER.pdf) — 8 body pages, plus cover, table of contents and references.
+- [Read the accessible Markdown version](RESEARCH_PAPER.md) — same research content, with inline citations and linked figures.
+
+This report reproduces the project's K-means analysis, adds independently calculated sensitivity checks and explicitly documents data-provenance limits. It is the **format-approval pilot**; the other projects have not been converted yet.
