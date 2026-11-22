@@ -1,14 +1,10 @@
 # Patterns Across National Development Indicators
 
-**A Reproducible K-means Clustering Study of 167 Country Records**  
-**Author:** Amogelang R. Pelo  
-**Paper type:** Project-based applied research report  
-**Date:** 22 November 2026  
-**Portfolio:** AI Engineering and Research / Machine Learning  
+**A K-means study of 167 country records**
 
-**Authorship and provenance note:** Based on the project notebook and accompanying dataset. Additional tests and critical assessment were performed for this paper. The dataset's original publisher and measurement years are not documented.
+**Amogelang R. Pelo**
 
----
+*This study is based on the original project notebook and its accompanying dataset. Additional analyses are identified separately from the original implementation.*
 
 ## Table of contents
 
@@ -23,12 +19,11 @@
 9. References
 
 ---
-<!-- Body page 1: Abstract and research problem -->
 
 ## Abstract
-This study examines whether national economic, demographic and health-related indicators can reveal meaningful groups of countries through unsupervised machine learning. It reproduces and critically evaluates a Python/Jupyter K-means project using the accompanying `Country-data.csv` file. The dataset contains **167 country records and nine numerical indicators**; no missing values were detected. The project applies Min-Max scaling, evaluates cluster counts from two to nine, and selects a three-cluster model for interpretation (Pelo, 2026; Dataset accompanying Pelo, n.d.).
+In this study, I examine whether national economic, demographic and health-related indicators can reveal meaningful groups of countries through unsupervised machine learning. It reproduces and critically evaluates a Python/Jupyter K-means project using the accompanying `Country-data.csv` file. The dataset contains **167 country records and nine numerical indicators**; no missing values were detected. The project applies Min-Max scaling, evaluates cluster counts from two to nine, and selects a three-cluster model for interpretation (Pelo, 2026; Dataset accompanying Pelo, n.d.).
 
-The reproduction yields a **three-cluster silhouette coefficient of 0.340**, compared with **0.377 for two clusters**. The three-group solution yields distinct median profiles for economic output, child mortality, life expectancy and fertility, but the higher two-cluster score indicates a tension between separation and substantive interpretability. Differences in algorithm settings, indicator definitions and dataset provenance restrict external claims. These clusters should be treated as exploratory **descriptions**, not official country classifications or measures of national worth.
+My reproduction yields a **three-cluster silhouette coefficient of 0.340**, compared with **0.377 for two clusters**. The three-group solution yields distinct median profiles for economic output, child mortality, life expectancy and fertility, but the higher two-cluster score indicates a tension between separation and substantive interpretability. Differences in algorithm settings, indicator definitions and dataset provenance restrict external claims. These clusters should be treated as exploratory **descriptions**, not official country classifications or measures of national worth.
 
 **Keywords:** K-means; economic indicators; clustering; silhouette analysis; data science; reproducibility.
 
@@ -39,9 +34,8 @@ The underlying student project asks whether a set of macroeconomic and social in
 
 **Research question:** *What country profiles emerge from K-means applied to the nine included numerical indicators, and how sensitive are those profiles to model selection and scaling choices?*
 
-The contribution of this paper is a traceable assessment of that implementation: the input data are examined, model quality is quantified, group profiles are described, and methodological limitations are made explicit. It does not test causal hypotheses about why countries differ.
+My contribution is a traceable assessment of that implementation: the input data are examined, model quality is quantified, group profiles are described, and methodological limitations are made explicit. It does not test causal hypotheses about why countries differ.
 
-<!-- Body page 2: Theory and analytical framework -->
 
 ## 2. Theoretical and methodological framework
 ### 2.1 Unsupervised grouping
@@ -62,7 +56,6 @@ No selection rule is definitive. A larger silhouette can favour a simpler partit
 ### 2.4 Algorithmic reproducibility
 K-means++ initialisation was developed to improve the choice of starting centroids (Arthur and Vassilvitskii, 2007). The notebook fixes `random_state=42` but leaves `n_init` at the installed library's default. Because defaults can change, recording the software version and explicit initialisation count is essential for an exact computational replication (scikit-learn developers, 2026a).
 
-<!-- Body page 3: Dataset and original implementation -->
 
 ## 3. Dataset and research design
 ### 3.1 Unit of analysis and variables
@@ -84,11 +77,10 @@ The notebook imports the CSV with pandas, selects numeric columns, displays scat
 `Country-data.csv`  →  numeric feature selection  →  Min-Max normalisation  →  K=2…9 diagnostics  →  K=3 fit  →  descriptive profiling
 
 ### 3.3 Reproduction and extensions
-This paper independently executes the model using the project dataset in **Python, pandas and scikit-learn 1.8.0**. Its first model sets match the notebook's visible instructions, including the fixed random seed and default `n_init`. Additional analyses—cluster medians, alternative `n_init` values, alternative scalers and outlier removal—are **new sensitivity checks**, not claims that the original notebook performed them.
+I independently reproduced the model using the project dataset in **Python, pandas and scikit-learn 1.8.0**. Its first model sets match the notebook's visible instructions, including the fixed random seed and default `n_init`. Additional analyses—cluster medians, alternative `n_init` values, alternative scalers and outlier removal—are **new sensitivity checks**, not claims that the original notebook performed them.
 
 No train/test split is required for descriptive clustering, but that fact does not imply validation: the model can be reproducible without yielding stable or substantively useful categories. Results below reflect the supplied dataset, not an independently verified real-world population.
 
-<!-- Body page 4: Quantitative model selection -->
 
 ## 4. Experimental results: model selection
 The silhouette comparison identifies **k = 2 as the strongest of the tested values** (0.3767). The notebook's selected **k = 3** solution has a score of **0.3398**. This is a modest, not catastrophic, reduction in separation and may be justified if the added group has distinct, useful attributes. A high score alone does not establish normative or policy validity (Rousseeuw, 1987).
@@ -101,7 +93,6 @@ The **inertia curve** also falls with each added cluster. Inertia is 25.947 for 
 
 **Interpretation:** selection rests on two criteria in tension. If separation is paramount, **two** is better supported by the silhouette evidence. If the research goal is to distinguish a middle profile from the extremes, **three** offers greater descriptive resolution. The results should therefore be presented as a conditional model choice, not as a proven taxonomy.
 
-<!-- Body page 5: Three-cluster empirical profiles -->
 
 ## 5. Characteristics of the three-cluster solution
 The chosen three-cluster fit assigns **87 countries to Cluster 0, 35 to Cluster 1, and 45 to Cluster 2**. Number labels are generated by the software and have no ordered meaning. To interpret the groups, the table below reports within-group medians; medians are more resistant to unusually high values than means.
@@ -119,7 +110,6 @@ The chosen three-cluster fit assigns **87 countries to Cluster 0, 35 to Cluster 
 
 **Cluster 1** combines the highest median `gdpp` and `income` with the lowest median child mortality and longest life expectancy in this dataset. **Cluster 2** is characterised by substantially lower economic measures, higher mortality and higher fertility. **Cluster 0** contains the largest and broadest intermediate grouping, including South Africa. These profiles identify statistical associations within the file; they do not imply any country's status is fixed or determined by the model (Jain, 2010).
 
-<!-- Body page 6: Sensitivity tests and reproducibility -->
 
 ## 6. Robustness and sensitivity analysis
 ### 6.1 Initialisation and software settings
@@ -140,7 +130,6 @@ After excluding **Luxembourg** and refitting the scaling and clustering pipeline
 
 The sensitivity exercises are not grounds to discard unusual countries. They identify a property of the method: using observed extrema to define distance can make the partition sensitive to a small number of cases. A more mature study would pre-register variable transformations, compare alternatives and assess stability through resampling (Jain, 2010).
 
-<!-- Body page 7: Interpretation and decision boundaries -->
 
 ## 7. Discussion: what the groupings can and cannot say
 ### 7.1 The intermediate group is heterogeneous
@@ -158,7 +147,6 @@ Countries are not interchangeable units; population size, data quality, historic
 
 The project is strongest when understood as a demonstration of **feature preparation, unsupervised modelling and critical interpretation**, and weakest when presented as an authoritative global ranking (Rousseeuw, 1987; Jain, 2010).
 
-<!-- Body page 8: Conclusion and reproducible protocol -->
 
 ## 8. Conclusions and next-stage research
 The project implements a coherent unsupervised-learning workflow: select nine indicators, normalise features, compare candidate cluster counts, fit K-means, and inspect the resulting observations. The independently reproduced evidence shows that a three-group solution produces **distinct central tendencies** and a mean silhouette of **0.340**, but that the two-group alternative has stronger separation at **0.377**. The three-group result is therefore best defended as an *interpretability choice* rather than a numerical optimum (Pelo, 2026; Rousseeuw, 1987).
@@ -166,7 +154,7 @@ The project implements a coherent unsupervised-learning workflow: select nine in
 Two findings are particularly important. First, descriptive medians differ substantially across the three groups, especially for `gdpp`, mortality and life expectancy; second, the model is not wholly invariant to scaling choices or extreme records. Together these findings support a balanced conclusion: K-means identifies useful patterns in the supplied observations, but **the pattern depends on decisions made by the analyst**.
 
 ### 8.1 Reproduction protocol
-The entire analysis is traceable to the GitHub folder linked below. To replicate the baseline: (1) load the original CSV; (2) select the nine numeric columns; (3) apply Min-Max normalisation; (4) fit `KMeans(n_clusters=k, random_state=42)` for k = 2 to 9; (5) compute inertia and the silhouette coefficient; (6) fit k = 3 and describe the assigned groups. Record **Python version, pandas version, scikit-learn version and `n_init`** because software defaults may change (Pedregosa *et al.*, 2011; scikit-learn developers, 2026a).
+The entire analysis is traceable to the GitHub folder linked below. To replicate my baseline analysis: (1) load the original CSV; (2) select the nine numeric columns; (3) apply Min-Max normalisation; (4) fit `KMeans(n_clusters=k, random_state=42)` for k = 2 to 9; (5) compute inertia and the silhouette coefficient; (6) fit k = 3 and describe the assigned groups. Record **Python version, pandas version, scikit-learn version and `n_init`** because software defaults may change (Pedregosa *et al.*, 2011; scikit-learn developers, 2026a).
 
 A practical reproducibility command sequence is:
 
@@ -175,31 +163,31 @@ python -m pip install pandas numpy scikit-learn matplotlib jupyter
 jupyter notebook country_kmeans_clustering.ipynb
 ```
 
-These commands demonstrate the project environment; exact dependencies should ideally be pinned before publication. The repository's CSV and notebook are the source files. This report's additional statistics, robust-scaling tests and outlier analysis are **independent follow-on calculations**, not modifications to the student's original code.
+These commands demonstrate the project environment; exact dependencies should ideally be pinned before publication. The repository's CSV and notebook are the source files. My additional statistics, robust-scaling tests and outlier analysis are **independent follow-on calculations**, not modifications to the student's original code.
 
 ### 8.2 Recommended extensions
 A publication-ready follow-up should establish the source and date of every indicator, report units and missing-data rules, compare two and three clusters with a predeclared criterion, test transformations of heavy-tailed variables, measure stability across repeated samples and explicitly evaluate whether each cluster conveys an actionable insight. Only then would the classifications be candidates for use beyond coursework.
 
-**Project source:** [Original notebook and dataset](https://github.com/amopelo-southafrica/AI-Engineering-and-Research/tree/main/Machine-Learning/exploring-country-development-clusters) · **Analysis performed:** 22 November 2026.
+**Project source:** [Original notebook and dataset](https://github.com/amopelo-southafrica/AI-Engineering-and-Research/tree/main/Machine-Learning/exploring-country-development-clusters)
 
 ---
 
 ## References
 
-Arthur, D. and Vassilvitskii, S. (2007) ‘k-means++: The advantages of careful seeding’, *Proceedings of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms*, pp. 1027–1035. Available at: https://research.google/pubs/k-means-the-advantages-of-careful-seeding/ (Accessed: 22 November 2026).
+Arthur, D. and Vassilvitskii, S. (2007) ‘k-means++: The advantages of careful seeding’, *Proceedings of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms*, pp. 1027–1035. Available at: https://research.google/pubs/k-means-the-advantages-of-careful-seeding/.
 
-Dataset accompanying Pelo, A.R. (n.d.) *Country-data.csv*, in ‘Exploring Country Development Clusters’. GitHub project dataset. Available at: https://github.com/amopelo-southafrica/AI-Engineering-and-Research/blob/main/Machine-Learning/exploring-country-development-clusters/Country-data.csv (Accessed: 22 November 2026). Original data producer, observation years and definitions are not documented in the file.
+Dataset accompanying Pelo, A.R. (n.d.) *Country-data.csv*, in ‘Exploring Country Development Clusters’. GitHub project dataset. Available at: https://github.com/amopelo-southafrica/AI-Engineering-and-Research/blob/main/Machine-Learning/exploring-country-development-clusters/Country-data.csv. Original data producer, observation years and definitions are not documented in the file.
 
 Jain, A.K. (2010) ‘Data clustering: 50 years beyond K-means’, *Pattern Recognition Letters*, 31(8), pp. 651–666. doi: 10.1016/j.patrec.2009.09.011.
 
-MacQueen, J. (1967) ‘Some methods for classification and analysis of multivariate observations’, *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability*, Vol. 1, pp. 281–297. Available at: https://digicoll.lib.berkeley.edu/record/113015 (Accessed: 22 November 2026).
+MacQueen, J. (1967) ‘Some methods for classification and analysis of multivariate observations’, *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability*, Vol. 1, pp. 281–297. Available at: https://digicoll.lib.berkeley.edu/record/113015.
 
-Pedregosa, F. *et al.* (2011) ‘Scikit-learn: Machine learning in Python’, *Journal of Machine Learning Research*, 12, pp. 2825–2830. Available at: https://jmlr.org/papers/v12/pedregosa11a.html (Accessed: 22 November 2026).
+Pedregosa, F. *et al.* (2011) ‘Scikit-learn: Machine learning in Python’, *Journal of Machine Learning Research*, 12, pp. 2825–2830. Available at: https://jmlr.org/papers/v12/pedregosa11a.html.
 
-Pelo, A.R. (2026) *Country Development Clustering with K-means: original Jupyter notebook*. GitHub portfolio. Available at: https://github.com/amopelo-southafrica/AI-Engineering-and-Research/blob/main/Machine-Learning/exploring-country-development-clusters/country_kmeans_clustering.ipynb (Accessed: 22 November 2026).
+Pelo, A.R. (2026) *Country Development Clustering with K-means: original Jupyter notebook*. GitHub portfolio. Available at: https://github.com/amopelo-southafrica/AI-Engineering-and-Research/blob/main/Machine-Learning/exploring-country-development-clusters/country_kmeans_clustering.ipynb.
 
 Rousseeuw, P.J. (1987) ‘Silhouettes: A graphical aid to the interpretation and validation of cluster analysis’, *Journal of Computational and Applied Mathematics*, 20, pp. 53–65. doi: 10.1016/0377-0427(87)90125-7.
 
-scikit-learn developers (2026a) ‘KMeans’, *scikit-learn documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html (Accessed: 22 November 2026).
+scikit-learn developers (2026a) ‘KMeans’, *scikit-learn documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html.
 
-scikit-learn developers (2026b) ‘silhouette_score’, *scikit-learn documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score (Accessed: 22 November 2026).
+scikit-learn developers (2026b) ‘silhouette_score’, *scikit-learn documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.
