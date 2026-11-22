@@ -57,6 +57,7 @@ The following projects have formal research manuscripts and GitHub-generated PDF
 
 | Project | Paper | PDF |
 |:--|:--|:--|
+| Diabetes visualisation and zero-value audit | [Read](Data-Analytics/visualising-diabetes-patterns/RESEARCH_PAPER.md) | [PDF](Data-Analytics/visualising-diabetes-patterns/RESEARCH_PAPER.pdf) |
 | Titanic passenger patterns | [Read](Data-Analytics/analysing-titanic-passenger-patterns/RESEARCH_PAPER.md) | [PDF](Data-Analytics/analysing-titanic-passenger-patterns/RESEARCH_PAPER.pdf) |
 | Electricity-access scaling | [Read](Data-Analytics/comparing-electricity-access/RESEARCH_PAPER.md) | [PDF](Data-Analytics/comparing-electricity-access/RESEARCH_PAPER.pdf) |
 | Iris classification | [Read](Machine-Learning/classifying-iris-flowers/RESEARCH_PAPER.md) | [PDF](Machine-Learning/classifying-iris-flowers/RESEARCH_PAPER.pdf) |
