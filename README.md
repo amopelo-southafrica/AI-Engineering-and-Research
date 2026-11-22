@@ -50,3 +50,21 @@ I use Python, data analysis, machine learning and neural networks to investigate
 Python · pandas · NumPy · SciPy · scikit-learn · PyTorch · TensorFlow · spaCy · Matplotlib · Jupyter Notebook
 
 The individual folders include my code, supporting datasets and written analyses where available.
+
+## Research papers
+
+The following projects have formal research manuscripts and GitHub-generated PDFs, with references and explicit limits on what their source data supports.
+
+| Project | Paper | PDF |
+|:--|:--|:--|
+| Titanic passenger patterns | [Read](Data-Analytics/analysing-titanic-passenger-patterns/RESEARCH_PAPER.md) | [PDF](Data-Analytics/analysing-titanic-passenger-patterns/RESEARCH_PAPER.pdf) |
+| Electricity-access scaling | [Read](Data-Analytics/comparing-electricity-access/RESEARCH_PAPER.md) | [PDF](Data-Analytics/comparing-electricity-access/RESEARCH_PAPER.pdf) |
+| Iris classification | [Read](Machine-Learning/classifying-iris-flowers/RESEARCH_PAPER.md) | [PDF](Machine-Learning/classifying-iris-flowers/RESEARCH_PAPER.pdf) |
+| Hierarchical Iris clustering | [Read](Machine-Learning/discovering-groups-with-hierarchical-clustering/RESEARCH_PAPER.md) | [PDF](Machine-Learning/discovering-groups-with-hierarchical-clustering/RESEARCH_PAPER.pdf) |
+| Titanic decision trees | [Read](Machine-Learning/explaining-titanic-survival-with-trees/RESEARCH_PAPER.md) | [PDF](Machine-Learning/explaining-titanic-survival-with-trees/RESEARCH_PAPER.pdf) |
+| Country-development clusters | [Read](Machine-Learning/exploring-country-development-clusters/RESEARCH_PAPER.md) | [PDF](Machine-Learning/exploring-country-development-clusters/RESEARCH_PAPER.pdf) |
+| US Arrests PCA and clustering | [Read](Machine-Learning/mapping-patterns-in-us-arrests/RESEARCH_PAPER.md) | [PDF](Machine-Learning/mapping-patterns-in-us-arrests/RESEARCH_PAPER.pdf) |
+| Telecom customer churn | [Read](Machine-Learning/predicting-which-customers-leave/RESEARCH_PAPER.md) | [PDF](Machine-Learning/predicting-which-customers-leave/RESEARCH_PAPER.pdf) |
+| Iris PCA visualisation | [Read](Machine-Learning/visualising-data-with-pca/RESEARCH_PAPER.md) | [PDF](Machine-Learning/visualising-data-with-pca/RESEARCH_PAPER.pdf) |
+
+The research papers distinguish original student notebook results, independently verified descriptive analysis and proposed future work. They do not imply all notebooks are error-free or all models were rerun.
