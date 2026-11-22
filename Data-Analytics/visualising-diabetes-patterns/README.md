@@ -4,6 +4,7 @@ This project reviews an original HyperionDev exploratory notebook using an **out
 
 ## Files and lineage
 
+- [`diabetes_visualisation_corrected.ipynb`](diabetes_visualisation_corrected.ipynb): separately repaired notebook with zero-aware median handling and a proper final markdown interpretation.
 - [`diabetes_visualisation_original.ipynb`](diabetes_visualisation_original.ipynb): original exploratory notebook. It expects a file named `diabetes(1).csv`.
 - [`diabetes(1).csv`](diabetes(1).csv): **restored matching dataset**, 768 rows, with `Glucose`, `BMI`, `Age`, `Outcome` and other fields. Copied exactly from the user's original HyperionDev M10T03 Random Forests task; source Git blob SHA `db6f317685a4668bc0529b16ea1544022e780002`.
 - [`diabetes.csv`](diabetes.csv): **different 442-row diabetes-progression regression dataset**, retained because it was present in the original M08T09 task materials. It is **not compatible** with this notebook's `Outcome` and `Glucose` code.
